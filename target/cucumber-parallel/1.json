@@ -1,0 +1,89 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4214200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.before_setup()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "2 WikiFrance",
+        "description": "",
+        "id": "wikifrance-functionality;2-wikifrance;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 179700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.teardown_setup()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9885186900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on wikiHome page",
+            "match": {
+              "location": "wikiHome_stepdef.Wiki_HomePageCheck()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 337390100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user enters France in searchbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "France",
+                  "offset": 16
+                }
+              ],
+              "location": "wikiHome_stepdef.user_enters_value_in_searchbox(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20452525600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user hits enter and see the page related to France",
+            "match": {
+              "location": "wikiFrance_stepdef.user_can_see_the_typed_value_in_searchbox()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "WikiFrance functionality",
+    "description": "",
+    "id": "wikifrance-functionality",
+    "keyword": "Feature",
+    "uri": "E:/Rio/Eclipse-Workspace/Rio/sample-selenium-cucumber/src/test/resources/features/wikiFrance.feature"
+  }
+]

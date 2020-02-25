@@ -1,4 +1,8 @@
-utils\baseClass.class
+Parallel02IT.class
+Parallel01IT.class
 pages\wikiHome.class
-runner\wiki_runner.class
 stepDefs\wikiHome_stepdef.class
+stepDefs\wikiFrance_stepdef.class
+utils\baseClass.class
+stepDefs\hooks.class
+runner\wiki_runner.class

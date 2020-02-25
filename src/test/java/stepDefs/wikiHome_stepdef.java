@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -22,12 +24,12 @@ public class wikiHome_stepdef extends baseClass{
 		System.out.println("Page : "+homePage.wikipedia.getText());
 	}
 	
-	@When("^the user enters value in searchbox$")
-	public void user_enters_value_in_searchbox() throws Throwable {
+	@When("^the user enters (.*) in searchbox$")
+	public void user_enters_value_in_searchbox(String value) throws Throwable {
 		homePage = new wikiHome();
 		WebDriverWait wait = new WebDriverWait(driver, 3000);
 		wait.until(ExpectedConditions.visibilityOf(homePage.searchInput));
-		homePage.searchInput.sendKeys("France");
+		homePage.searchInput.sendKeys(value);
 	}
 	
 	@Then("^the user can see the typed in text$")

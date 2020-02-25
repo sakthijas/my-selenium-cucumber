@@ -7,12 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class baseClass {
 	public static WebDriver driver;
 	
 	public static WebDriver setup() {
+		
+		
 		try {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
